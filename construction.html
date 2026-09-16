@@ -105,6 +105,42 @@
     color: var(--muted);
     margin-top: 32px;
   }
+  .mascot-wrap {
+    margin: 4px auto 8px;
+    width: 220px;
+  }
+  .mascot-wrap svg { width: 100%; height: auto; overflow: visible; }
+  .hammer-arm {
+    transform-origin: 60px 120px;
+    animation: hammer-strike 1.8s ease-in-out infinite;
+  }
+  @keyframes hammer-strike {
+    0%   { transform: rotate(0deg); }
+    18%  { transform: rotate(-70deg); }
+    32%  { transform: rotate(0deg); }
+    100% { transform: rotate(0deg); }
+  }
+  .impact-burst {
+    opacity: 0;
+    animation: impact-flash 1.8s ease-in-out infinite;
+    transform-origin: 34px 134px;
+  }
+  @keyframes impact-flash {
+    0%, 15%, 27%, 100% { opacity: 0; transform: scale(.6); }
+    19% { opacity: 1; transform: scale(1); }
+    26% { opacity: 0; transform: scale(1.1); }
+  }
+  .plank {
+    animation: plank-jolt 1.8s ease-in-out infinite;
+    transform-origin: 57px 142px;
+  }
+  @keyframes plank-jolt {
+    0%, 15%, 27%, 100% { transform: translateY(0); }
+    19% { transform: translateY(2px); }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .hammer-arm, .impact-burst, .plank { animation: none; }
+  }
 </style>
 </head>
 <body>
@@ -116,6 +152,43 @@
       </svg>
       Site în construcție
     </span>
+    <div class="mascot-wrap" aria-hidden="true">
+      <svg viewBox="0 0 235 170" xmlns="http://www.w3.org/2000/svg">
+        <g transform="translate(15,0)">
+          <g class="plank">
+            <rect x="15" y="136" width="85" height="12" rx="3" fill="var(--border)"/>
+            <rect x="15" y="136" width="85" height="3" rx="1.5" fill="var(--bg)" opacity=".5"/>
+          </g>
+          <g class="impact-burst" stroke="var(--accent)" stroke-width="2.5" stroke-linecap="round">
+            <path d="M34,128 L34,120"/>
+            <path d="M24,132 L17,126"/>
+            <path d="M44,132 L51,126"/>
+            <path d="M20,140 L12,140"/>
+            <path d="M48,140 L56,140"/>
+          </g>
+          <g fill="none" stroke="var(--forest)" stroke-width="5" stroke-linecap="round">
+            <path d="M98,132 C90,144 84,152 76,156"/>
+            <path d="M114,134 C110,148 108,156 102,160"/>
+            <path d="M130,132 C132,146 136,154 140,158"/>
+            <path d="M146,126 C152,138 158,144 166,140"/>
+          </g>
+          <path d="M130,102 C167,93 186,68 178,44 C173,24 146,13 121,27" fill="none" stroke="var(--forest)" stroke-width="11" stroke-linecap="round"/>
+          <polygon points="121,27 106,19 117,38" fill="var(--accent)"/>
+          <path d="M55,118 C40,124 30,132 31,140 C32,145 38,147 44,144" fill="none" stroke="var(--forest)" stroke-width="7" stroke-linecap="round"/>
+          <ellipse cx="100" cy="112" rx="37" ry="21" fill="var(--forest)"/>
+          <circle cx="67" cy="107" r="17" fill="var(--forest)"/>
+          <circle cx="61" cy="100" r="2.1" fill="var(--bg)"/>
+          <circle cx="70" cy="97" r="2.1" fill="var(--bg)"/>
+          <g class="hammer-arm">
+            <path d="M60,120 C48,110 40,105 36,102" fill="none" stroke="var(--forest)" stroke-width="7" stroke-linecap="round"/>
+            <g transform="translate(36,102) rotate(200)">
+              <rect x="-3" y="0" width="6" height="46" rx="3" fill="#8a6a4a"/>
+              <rect x="-17" y="38" width="34" height="20" rx="4" fill="var(--muted)"/>
+            </g>
+          </g>
+        </g>
+      </svg>
+    </div>
     <h1>Pregătim <em>o zi</em><br>în județul Hunedoara</h1>
     <p>Lucrăm la ghidul de călătorie prin Valea Jiului și împrejurimi. Revenim în curând cu locuri, itinerarii și povești din zonă.</p>
     <hr class="ornament">
