@@ -8,6 +8,14 @@
 [functions]
   node_bundler = "esbuild"
 
+# Site în construcție: toate paginile arată construction.html.
+# Pentru a republica site-ul real, șterge acest bloc de redirect.
+[[redirects]]
+  from = "/*"
+  to = "/construction.html"
+  status = 200
+  force = true
+
 # Pagina 404 personalizată
 [[redirects]]
   from = "/*"
