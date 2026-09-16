@@ -1,0 +1,15 @@
+{
+  "name": "o-zi-in-hunedoara",
+  "version": "1.0.0",
+  "description": "Site static bilingv RO/EN - schelet. Tema: 24 de ore in Valea Jiului, cu extindere la tot judetul Hunedoara.",
+  "private": true,
+  "type": "commonjs",
+  "scripts": {
+    "start": "node serve.js",
+    "test": "node test/run.mjs"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "jsdom": "^30.0.1"
+  }
+}

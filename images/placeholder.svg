@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-label="Imagine in curand / Image coming soon">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#eae3d4"/>
+      <stop offset="1" stop-color="#d6c8ae"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#sky)"/>
+  <circle cx="610" cy="150" r="50" fill="#c9772e" opacity="0.85"/>
+  <path d="M0 470 L190 300 L330 430 L470 250 L640 450 L800 340 L800 600 L0 600 Z" fill="#8a7a58" opacity="0.5"/>
+  <path d="M0 528 L160 390 L300 510 L430 370 L560 510 L700 400 L800 470 L800 600 L0 600 Z" fill="#1f7a5a" opacity="0.5"/>
+  <text x="400" y="566" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="26" fill="#5a5142" opacity="0.9">Imagine în curând · Image coming soon</text>
+</svg>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>O zi în județul Hunedoara</title>
+  <meta name="description" content="Ce vizitezi, unde mănânci și unde te cazezi într-o zi în Valea Jiului și în județul Hunedoara. Trasee Waze și Google Maps, poze, descrieri, recenzii.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;1,6..72,400&display=swap">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="brand" href="index.html">Hunedoara <span>·</span> <span data-i18n="site.name">O zi în Valea Jiului</span></a>
+      <nav class="site-nav">
+        <a href="index.html" data-i18n="nav.home">Acasă</a>
+        <a href="itinerariu.html" data-i18n="nav.itinerary">Itinerariu 24h</a>
+        <a href="credite.html" data-i18n="nav.credits">Imagini &amp; credite</a>
+        <a class="donate-btn" href="#" data-donate data-i18n="nav.donate" data-i18n-attr="aria-label:donate.aria">Donează</a>
+        <button id="lang-toggle" class="lang-toggle" type="button" data-i18n="lang.switch" data-i18n-attr="aria-label:lang.switch.aria">EN</button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <h1 data-i18n="site.name">O zi în Valea Jiului</h1>
+      <p data-i18n="site.tagline">Ce vizitezi, unde mănânci și unde te cazezi — un plan pentru 24 de ore.</p>
+    </section>
+
+    <section id="itin-preview" class="itin-mini" aria-label="Itinerariu"></section>
+
+    <section class="filters" aria-labelledby="filters-h">
+      <h2 id="filters-h" data-i18n="filters.heading">Caută și filtrează</h2>
+      <div class="filters__row">
+        <div class="field field--search">
+          <label for="f-search" data-i18n="filters.search">Caută după nume</label>
+          <input id="f-search" type="search" autocomplete="off" data-i18n-attr="placeholder:filters.search.placeholder" placeholder="ex. Petroșani, Straja, Parâng…">
+        </div>
+        <div class="field">
+          <label for="f-section" data-i18n="filters.section">Secțiune</label>
+          <select id="f-section"></select>
+        </div>
+        <div class="field">
+          <label for="f-area" data-i18n="filters.area">Zonă / localitate</label>
+          <select id="f-area"></select>
+        </div>
+        <button id="f-reset" class="btn-reset" type="button" data-i18n="filters.reset">Resetează</button>
+      </div>
+    </section>
+
+    <section class="map-block" aria-labelledby="map-h">
+      <div class="map-block__head">
+        <h2 id="map-h" data-i18n="home.map.heading">Harta locurilor</h2>
+        <span class="hint" data-i18n="home.map.hint">Apasă pe un punct pentru detalii.</span>
+      </div>
+      <div id="map"></div>
+    </section>
+
+    <div class="results-bar"><span class="count" id="result-count">—</span></div>
+    <section id="grid" class="grid" aria-live="polite"></section>
+    <p id="empty" class="empty" hidden data-i18n="filters.none">Niciun loc nu se potrivește cu filtrele alese.</p>
+
+    <section class="donate-callout" data-donate-wrap aria-labelledby="donate-h">
+      <h2 id="donate-h" data-i18n="donate.heading">Îți e util site-ul?</h2>
+      <p data-i18n="donate.text">Proiectul e gratuit și fără reclame. Dacă vrei, poți susține munca printr-o donație.</p>
+      <a class="btn btn--donate" href="#" data-donate data-i18n="donate.cta" data-i18n-attr="aria-label:donate.aria">Donează pe PayPal</a>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container"><p data-i18n="footer.note">Proiect personal, necomercial.</p></div>
+  </footer>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/config.js"></script>
+  <script src="js/i18n.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/home.js"></script>
+</body>
+</html>
